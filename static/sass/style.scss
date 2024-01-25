@@ -1,0 +1,80 @@
+@import 'partials/colors';
+@import 'partials/mixins';
+
+/* Mixin for media query */
+@mixin theme-media-query($theme) {
+    @media (prefers-color-scheme: #{$theme}) {
+        @content;
+    }
+}
+
+
+header{
+    padding: 1rem;
+    background-color: aqua;
+}
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* dark mode user-agent-styles */
+/* improves punctuation in supported browsers */
+html {
+    color-scheme: dark light;
+    hanging-punctuation: first last;
+}
+
+/* min body height */
+body {
+    min-height: 100svh;
+    font-family: "Tajawal", sans-serif; // 200 to 900
+    font-size: 1rem;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img, video{
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Improved heading in supported browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* improve readability with max-width on paragraphs and lists */
+/* prevent orphans in supported browsers */
+p,
+li {
+  max-width: var(--p-max-width, 65ch);
+  text-wrap: pretty;
+}

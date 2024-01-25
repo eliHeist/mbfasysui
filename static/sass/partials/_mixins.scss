@@ -1,0 +1,54 @@
+@mixin dark {
+    html.dark & {
+        @content;
+    }
+}
+
+// Generated Mixins
+@mixin min-sm {
+    @media (min-width: 640px) {
+        @content;
+    }
+}
+
+@mixin max-sm {
+    @media (max-width: 639px) {
+        @content;
+    }
+}
+
+@mixin min-md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin max-md {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin min-lg {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin max-lg {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin min-xl {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin max-xl {
+    @media (max-width: 1279px) {
+        @content;
+    }
+}
